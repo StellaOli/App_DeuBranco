@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { TextInput, Text, View, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import firebase from '../config/config'
-import {
-  Gesture,
-  GestureDetector,
-  GestureHandlerRootView,
-} from 'react-native-gesture-handler';
-
 
 class Salvar extends React.Component{
   constructor(props){
@@ -21,7 +15,7 @@ class Salvar extends React.Component{
 
   salvar(){
     firebase.database().ref('/caracteristicas').push({
-      palavra_chave: this.palavra_chave,
+      palavra_chave: this.state.palavra_input,
     });
     alert("Item Salvo");
     
@@ -31,12 +25,11 @@ class Salvar extends React.Component{
     const now = Date.now();
     if (now - this.lastTap < this.doubleTapDelay) {
       this.salvar();
-      // this.setState({palavra_input: ""});
+      this.setState({palavra_input: ""});
     }
     this.lastTap = now;
   }
   digitar(texto){
-    console.log(texto);
     this.setState({palavra_input:texto});
     console.log(this.palavra_chave);
   }
@@ -90,3 +83,4 @@ const estilos = StyleSheet.create({
 });
   
 export default Salvar;
+
