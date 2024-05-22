@@ -5,6 +5,7 @@ O aplicativo propõe uma solução para os momentos em que você está com uma p
 A intenção era desenvolver algo que reconheça padrões em um app que seria como um "assistente da sua memória".
 Essa proposta aparece de duas formas: em "mente compartilhada" e "minha mente", a primeira tendo acesso ao banco de dados geral do aplicativo, enquanto a segunda acessa o banco de dados do usuário específico.
 
+<img src="https://github.com/StellaOli/App_DeuBranco/blob/main/Img/Inicio.jpg" style="max-width: 75%;" alt="Inicio" />
 
 - Funcionalidade:
 A intenção era trazer as seguintes lógicas 
